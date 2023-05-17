@@ -1,0 +1,12 @@
+D:\Documentos\Proyectos Personales\Cursos\Curso ASP.NET MVC 5\SistemaWeb_Carrito\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\Documentos\Proyectos Personales\Cursos\Curso ASP.NET MVC 5\SistemaWeb_Carrito\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\Documentos\Proyectos Personales\Cursos\Curso ASP.NET MVC 5\SistemaWeb_Carrito\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+D:\Documentos\Proyectos Personales\Cursos\Curso ASP.NET MVC 5\SistemaWeb_Carrito\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+D:\Documentos\Proyectos Personales\Cursos\Curso ASP.NET MVC 5\SistemaWeb_Carrito\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\Documentos\Proyectos Personales\Cursos\Curso ASP.NET MVC 5\SistemaWeb_Carrito\CapaEntidad\obj\Debug\CapaEntidad.pdb
+D:\Documentos\Sexto Semestre\TallerDeEmprendedores\SistemaWebBiblioteca\SistemaWeb_Carrito\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\Documentos\Sexto Semestre\TallerDeEmprendedores\SistemaWebBiblioteca\SistemaWeb_Carrito\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\Documentos\Sexto Semestre\TallerDeEmprendedores\SistemaWebBiblioteca\SistemaWeb_Carrito\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+D:\Documentos\Sexto Semestre\TallerDeEmprendedores\SistemaWebBiblioteca\SistemaWeb_Carrito\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+D:\Documentos\Sexto Semestre\TallerDeEmprendedores\SistemaWebBiblioteca\SistemaWeb_Carrito\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\Documentos\Sexto Semestre\TallerDeEmprendedores\SistemaWebBiblioteca\SistemaWeb_Carrito\CapaEntidad\obj\Debug\CapaEntidad.pdb
