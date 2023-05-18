@@ -283,7 +283,7 @@ go
 select * from libro;
 select * from venta;
 select * from DetalleVenta
---insercion prueba de detalle venta
+--insercion prueba de detalle venta (Como prestamo en la de bilbiloteca)
 insert into DetalleVenta(IdVenta,IdLibro, Cantidad, Total)
 values (9,1,1,4000);
 
