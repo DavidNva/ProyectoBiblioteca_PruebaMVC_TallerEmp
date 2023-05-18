@@ -12,9 +12,9 @@ namespace CapaNegocio
     {
         private BD_Reporte objCapaDato = new BD_Reporte();
 
-        public List<EN_Reporte> Ventas(string fechaInicio, string fechaFin, string idTransaccion)
+        public List<EN_Reporte> Ventas(string fechaInicio, string fechaFin, string idLibro)
         {
-            return objCapaDato.Ventas(fechaInicio, fechaFin, idTransaccion);
+            return objCapaDato.Ventas(fechaInicio, fechaFin, idLibro); 
         }
 
         public EN_DashBoard VerDashBoard() /*Usa una clase de la capa entidad*/

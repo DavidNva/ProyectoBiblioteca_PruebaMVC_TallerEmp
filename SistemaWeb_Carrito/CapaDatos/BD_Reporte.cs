@@ -46,7 +46,7 @@ namespace CapaDatos
             return objeto;
         }
 
-        public List<EN_Reporte> Ventas(string fechaInicio, string fechaFin, string idTransaccion)
+        public List<EN_Reporte> Ventas(string fechaInicio, string fechaFin, string idLibro)
         {
             List<EN_Reporte> lista = new List<EN_Reporte>();
             try
@@ -58,7 +58,7 @@ namespace CapaDatos
                     cmd.CommandType = CommandType.StoredProcedure;/*En este caso es de tipo Text (no usamos para este ejemplo, procedimientos almacenados*/
                     cmd.Parameters.AddWithValue("fechaInicio", fechaInicio);
                     cmd.Parameters.AddWithValue("fechaFin", fechaFin);
-                    cmd.Parameters.AddWithValue("idLibro", idTransaccion);
+                    cmd.Parameters.AddWithValue("idLibro", idLibro);
                     oConexion.Open();
                     using (SqlDataReader dr = cmd.ExecuteReader())/*Lee todos los resultados que aparecen en la ejecucion del select anter ior*/
                     {
@@ -70,13 +70,13 @@ namespace CapaDatos
                                     /*Lo que esta dentro de los corchetes es el nombre de la columna de la tabla generada con el procedimiento almacenado*/
                                     FechaRegistro = dr["FechaRegistro"].ToString(),
                                     Libro = dr["Libro"].ToString(),
-                                    Descripcion = dr["Descripcion"].ToString(),
                                     Autor = dr["Autor"].ToString(),
-                                    Paginas = Convert.ToInt32(dr["Paginas"].ToString()),//Checar este .tostring();
+                                    Categoria = dr["Categoria"].ToString(),
+                                    Paginas = Convert.ToDecimal(dr["Paginas"].ToString()),//Checar este .tostring();
                                     Stock = Convert.ToInt32(dr["Stock"].ToString()),
-                                    IdLibro = dr["IdLibro"].ToString()
-
-                                }   
+                                    IdLibro = Convert.ToInt32(dr["IdLibro"].ToString())
+                                    
+                                }
                                 );
                         }
                     }

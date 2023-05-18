@@ -280,7 +280,12 @@ select
     (select count(*) from Libro)[TotalLibro]
 end
 go
-
+select * from libro;
+select * from venta;
+select * from DetalleVenta
+--insercion prueba de detalle venta
+insert into DetalleVenta(IdVenta,IdLibro, Cantidad, Total)
+values (9,1,1,4000);
 
 
 select * from Producto
@@ -325,6 +330,8 @@ SELECT * from Venta
 select * from DetalleVenta
 select * from libro
 go
+use BibliotecaBD;
+go
 create proc sp_ReporteVentas(
     @fechaInicio varchar(10),
     @fechaFin varchar(10),
@@ -335,10 +342,10 @@ begin
     set dateformat dmy; /*Indicamos el formato que queremos si o si*/
     --el formato 103, muestra solo la fecha
         select CONVERT(char(10), l.FechaRegistro,103)[FechaRegistro],
-        l.Titulo[Libro],l.Descripcion, a.Nombre[Autor], l.Paginas, l.Stock,l.IdLibro
+        l.Titulo[Libro],a.Nombre[Autor], c.Descripcion[Categoria], l.Paginas, l.Stock,l.IdLibro
         from Libro l
         --select * from libro l
-        inner join Autor a on a.IdAutor = l.IdAutor
+        inner join Autor a on a.IdAutor = l.IdAutor 
         inner join Categoria c on c.IdCategoria = l.IdCategoria
     where CONVERT(date,l.FechaRegistro) BETWEEN @fechaInicio and @fechaFin 
     /*Si el usuario no esta indicando ningun id de transaccion, le decimos que use ese mismo id transaccion del where, pero
@@ -346,11 +353,14 @@ begin
     and l.IdLibro = iif(@idLibro = '', l.IdLibro, @idLibro)
 end
 go
-sp_ReporteVentas '16-05-2023','16-05-2023','1';
+go
+sp_ReporteVentas '14-05-2023','16-05-2023','';
 go
 select * from Categoria
 select * from autor
 select * from libro
+select * from venta;
+select * from detalle venta;
 
 
 go
@@ -378,8 +388,10 @@ select * from venta
 select * from DetalleVenta
 select * from libro
 select * from cliente
+
 sp_ReporteVentas '14/05/2023','15/05/2023','';
 
 
 select * from autor
 SELECT * FROM LIBRO
+

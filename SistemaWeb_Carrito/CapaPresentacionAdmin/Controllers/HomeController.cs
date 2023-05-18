@@ -65,10 +65,10 @@ namespace CapaPresentacionAdmin.Controllers
         }
         /*La consulta de busqueda por fecha o id transaccion*/
         [HttpGet]
-        public JsonResult ListaReporte(string fechaInicio, string fechaFin, string idTransaccion) 
+        public JsonResult ListaReporte(string fechaInicio, string fechaFin, string idLibro) 
         {
             List<EN_Reporte> oLista = new List<EN_Reporte>();
-            oLista = new RN_Reporte().Ventas(fechaInicio, fechaFin, idTransaccion);
+            oLista = new RN_Reporte().Ventas(fechaInicio, fechaFin, idLibro);
 
             return Json(new { data = oLista }, JsonRequestBehavior.AllowGet); /*Obtenemos el objeto del reporte*/
         }
@@ -91,21 +91,21 @@ namespace CapaPresentacionAdmin.Controllers
 
             DataTable dt = new DataTable();
             dt.Locale = new System.Globalization.CultureInfo("es-MX"); /*Configuracion con mexico*/
-            dt.Columns.Add("Fecha Venta", typeof(string));
-            dt.Columns.Add("Cliente", typeof(string));
-            dt.Columns.Add("Producto", typeof(string));
-            dt.Columns.Add("Precio", typeof(decimal));
-            dt.Columns.Add("Cantidad", typeof(int));
-            dt.Columns.Add("Total", typeof(decimal));
-            dt.Columns.Add("IdTransaccion", typeof(string));
+            dt.Columns.Add("Fecha Registro", typeof(string));
+            dt.Columns.Add("Libro", typeof(string));
+            dt.Columns.Add("Autor", typeof(string));
+            dt.Columns.Add("Categoria", typeof(string));
+            dt.Columns.Add("Paginas", typeof(int));
+            dt.Columns.Add("Stock", typeof(int));
+            dt.Columns.Add("IdLibro", typeof(string));
 
             foreach (EN_Reporte rp in oLista)
             {
                 dt.Rows.Add(new object[]{
                     rp.FechaRegistro,
                     rp.Libro,
-                    rp.Descripcion,
                     rp.Autor,
+                    rp.Categoria,
                     rp.Paginas,
                     rp.Stock,
                     rp.IdLibro
